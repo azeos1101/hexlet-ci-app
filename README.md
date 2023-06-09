@@ -1,3 +1,7 @@
+
+![Build workflow](https://github.com/azeos1101/hexlet-ci-app/actions/workflows/ci.yml/badge.svg)
+![Snyk workflow](https://github.com/azeos1101/hexlet-ci-app/actions/workflows/snyk.yml/badge.svg)
+
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
