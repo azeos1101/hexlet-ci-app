@@ -7,6 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: install deps
         run: make install
       - name: run linter
@@ -17,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: install deps
         run: make install
       - name: run tests
@@ -26,10 +32,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
-      - name: debug
-        run: echo $SNYK_TOKEN
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
@@ -41,6 +43,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: install deps
         run: make install
       - name: create build
